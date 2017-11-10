@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:07:32 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/10 09:34:14 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/10 19:39:59 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** Calcule et retourne la longueur de la chaine passé en paranettre.
 */
 
-int		ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
 	int i;
 
