@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:32:01 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/09 09:34:52 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:07:46 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@ void		ft_striter(char *str, void (*f)(char *))
 {
 	int i;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (str && f)
 	{
-		(*f)(str + i);
-		i++;
+		i = 0;
+		while (str[i] != '\0')
+		{
+			(*f)(str + i);
+			i++;
+		}
 	}
 }

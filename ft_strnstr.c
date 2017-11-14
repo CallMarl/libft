@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:32:50 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/09 13:45:09 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:55:32 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,25 @@
 ** apres la fin de chaine str ne sont pas pris en compt,
 */
 
-char		*ft_strnstr(char *str, char *to_find, size_t n)
+char		*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	size_t i;
 	size_t j;
 	size_t len;
 
+	len = ft_strlen(to_find);
+	if (ft_strcmp(str, to_find) == 0 && n == ft_strlen(str))
+		return ((char *)str);
 	i = 0;
-	j = 0;
-	len = ft_strlen(str);
-	if (n > len)
-		n = len;
-	while (j <= n)
+	while (str[i] != '\0' && (int)i <= (int)(n - len))
 	{
-		if (str[j] == to_find[i])
-		{
-			i++;
+		j = 0;
+		while (to_find[j] == str[i + j] && to_find[j] != '\0' &&
+				str[i + j] != '\0')
 			j++;
-			if (to_find[i] == '\0')
-				return (&str[j - i]);
-		}
-		else
-		{
-			i = 0;
-			j++;
-		}
+		if (to_find[j] == '\0')
+			return ((char *)(str + i));
+		i++;
 	}
 	return (0);
 }

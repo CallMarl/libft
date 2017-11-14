@@ -6,9 +6,11 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:07:32 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/10 19:39:59 by                  ###   ########.fr       */
+/*   Updated: 2017/11/14 14:56:02 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 ** Calcule et retourne la longueur de la chaine passé en paranettre.

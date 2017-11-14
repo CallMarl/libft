@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:27:00 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/10 19:38:29 by                  ###   ########.fr       */
+/*   Updated: 2017/11/14 19:13:28 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 typedef struct	s_list
 {
-	struct s_list	*next;
-	size_t			content_size;
 	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
 }				t_list;
 
 int				ft_atoi(char *str);
@@ -37,12 +37,12 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list			*ft_lstnew(void const *content, size_t content_size);
-void			*ft_memalloc(int size);
-void			*ft_memccpy(void *ptrd, void *ptrs, int c, size_t n);
+t_list			*ft_lstnew(const void *content, size_t content_size);
+void			*ft_memalloc(size_t size);
+void			*ft_memccpy(void *ptrd, const void *ptrs, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-void			*ft_memcpy(void *ptrd, void *ptrs, size_t n);
+void			*ft_memcpy(void *ptrd, const void *ptrs, size_t n);
 void			ft_memdel(void **ptr);
 int				ft_memjunc(void *ptr1, void *ptr2, size_t n);
 void			*ft_memmove(void *ptrd, void *ptrs, size_t n);
@@ -76,7 +76,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dest, char *src, size_t n);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strnew(size_t size);
-char			*ft_strnstr(char *str, char *to_find, size_t n);
+char			*ft_strnstr(const char *str, const char *to_find, size_t n);
 char			*ft_strrchr(char *str, int c);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(char *str, char *to_find);

@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:30:19 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/09 15:08:15 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/14 14:42:50 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*alst;
 	t_list	*tmp;
 
-	alst = NULL;
+	alst = 0;
 	if (lst)
 	{
 		alst = ft_lstmap(lst->next, f);
-		if ((tmp = f(lst)) == NULL)
-			return (NULL);
+		if ((tmp = f(lst)) == 0)
+			return (0);
 		if (alst)
 			ft_lstadd(&alst, tmp);
 		else
 		{
-			if ((alst = ft_lstnew(tmp->content, tmp->content_size)) == NULL)
-				return (NULL);
+			if ((alst = ft_lstnew(tmp->content, tmp->content_size)) == 0)
+				return (0);
 		}
 	}
 	return (alst);

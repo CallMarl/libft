@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:24:41 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/09 09:26:39 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/13 12:04:08 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 void		ft_strdel(char **str)
 {
-	free(*str);
-	*str = NULL;
+	if (str != NULL && *str != NULL)
+	{
+		free(*str);
+		*str = NULL;
+	}
 }

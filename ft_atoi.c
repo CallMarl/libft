@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:46:25 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/10 10:30:02 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:09:57 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ extern int		ft_atoi(char *str)
 	str = checkspecial(str);
 	if (*str == '+')
 		str++;
-	if (*str == '-')
+	else if (*str == '-')
 	{
 		str++;
 		neg = 1;

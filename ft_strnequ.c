@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:38:42 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/09 11:28:12 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:33:39 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if (s1 == 0 || s2 == 0)
+		return (0);
 	if (ft_strncmp(s1, s2, n) == 0)
 		return (1);
 	else

@@ -83,7 +83,3 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
-
-debug : re
-	gcc -I$(INCLUDES) -c main.c $(FLAGS)
-	gcc -L./ main.o -o debug -lft

@@ -6,11 +6,10 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:59:40 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/10 10:00:28 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:09:53 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 /*
@@ -35,17 +34,16 @@ static int		is_splitoccurence(int indice, char s_val, char s_valpre, char c)
 ** se termine à la rencontre du caractere c.
 */
 
-static char		*malloc_word(int indice, char const *s, char c)
+static char		*malloc_word(int indice, const char *s, char c)
 {
 	char	*word;
 	int		len;
 
 	len = 0;
-	while (s[indice + len] != c)
+	while (s[indice + len] != c && s[indice + len] != '\0')
 		len++;
-	if ((word = (char *)(malloc(sizeof(char) * (len + 1)))) != NULL)
+	if ((word = ft_strnew(len)))
 	{
-		word[len] = '\0';
 		while (s[indice + len - 1] != c && len != 0)
 		{
 			word[len - 1] = s[indice + len - 1];
@@ -53,8 +51,7 @@ static char		*malloc_word(int indice, char const *s, char c)
 		}
 		return (word);
 	}
-	else
-		return (NULL);
+	return (0);
 }
 
 /*
@@ -62,26 +59,30 @@ static char		*malloc_word(int indice, char const *s, char c)
 ** decoupe de la chaine s passé en paramettre par le caractere c.
 */
 
-extern char		**ft_strsplit(char const *s, char c)
+extern char		**ft_strsplit(const char *s, char c)
 {
 	int		i;
 	int		cpt;
 	char	**split;
 
+	if (!s)
+		return (0);
 	i = 0;
-	cpt = 0;
+	cpt = (s[0] != c) ? 1 : 0;
 	while (s[i++] != '\0')
 		cpt += is_splitoccurence(i, s[i], s[i - 1], c);
-	if ((split = (char **)(malloc(sizeof(char *) * (cpt + 1)))) == NULL)
-		return (NULL);
+	if ((split = (char **)ft_memalloc(sizeof(char *) * (cpt + 1))) == 0)
+		return (0);
 	cpt = 0;
 	i = 0;
 	while (s[i] != '\0')
 	{
 		if (is_splitoccurence(i, s[i], s[i - 1], c))
+		{
 			split[cpt++] = malloc_word(i, s, c);
+		}
 		i++;
 	}
-	split[cpt] = "";
+	split[cpt] = 0;
 	return (split);
 }

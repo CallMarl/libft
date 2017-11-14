@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:22:49 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/09 09:23:02 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/13 11:46:02 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_memdel(void **ptr)
 {
-	free(*ptr);
-	*ptr = NULL;
+	if (ptr != NULL && *ptr != NULL)
+	{
+		free(*ptr);
+		*ptr = NULL;
+	}
 }
