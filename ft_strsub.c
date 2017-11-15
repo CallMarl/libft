@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:47:40 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/14 16:45:34 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:18:32 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** commence à l'index start et est de longueur len.
 */
 
-char		*ft_strsub(char const *s, unsigned int start, size_t len)
+char		*ft_strsub(const char *s, unsigned int start, size_t len)
 {
 	char			*cpy;
 	unsigned int	i;

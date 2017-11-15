@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:48:18 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/13 14:13:15 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:18:37 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** et fin de chaine.
 */
 
-char		*ft_strtrim(char const *s1)
+char		*ft_strtrim(const char *s1)
 {
 	int		i;
 	int		y;

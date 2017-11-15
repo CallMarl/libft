@@ -6,14 +6,14 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:32:58 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/13 12:32:01 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:18:11 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char		*ft_strmap(char const *s, char (*f)(char))
+char		*ft_strmap(const char *s, char (*f)(char))
 {
 	char	*mstr;
 	int		len;

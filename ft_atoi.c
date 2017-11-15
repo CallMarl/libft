@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:46:25 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/14 15:09:57 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:15:09 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** Vérifie les carcatères spéciaux en début de chaine pour atoi.
 */
 
-static char		*checkspecial(char *str)
+static const char		*checkspecial(const char *str)
 {
 	while (1)
 	{
@@ -34,7 +34,7 @@ static char		*checkspecial(char *str)
 ** numérique) en un int et le retourn.
 */
 
-extern int		ft_atoi(char *str)
+extern int				ft_atoi(const char *str)
 {
 	int	neg;
 	int	nbr;

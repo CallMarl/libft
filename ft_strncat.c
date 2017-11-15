@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:07:42 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/08 17:17:57 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:18:15 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** de dest puis la retourn.
 */
 
-char		*ft_strncat(char *dest, char *src, int nbr)
+char		*ft_strncat(char *dest, const char *src, int nbr)
 {
 	int i;
 	int dest_len;

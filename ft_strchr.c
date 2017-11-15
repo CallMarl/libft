@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:20:34 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/08 17:21:29 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:22:28 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 ** de fin de chaine.
 */
 
-char		*ft_strchr(char *str, int c)
+char		*ft_strchr(const char *str, int c)
 {
 	char	*tmp_str;
 
-	tmp_str = str;
+	tmp_str = (char *)str;
 	while (*tmp_str != '\0')
 	{
 		if (*tmp_str == c)

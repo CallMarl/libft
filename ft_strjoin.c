@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:46:18 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/13 13:38:00 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:18:05 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** des chaine s1 et s2.
 */
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*cat;
 	int		len1;
