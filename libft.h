@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:27:00 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/15 13:08:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2017/11/16 15:07:43 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void			ft_putnbr(int nbr);
 void			ft_putnbr_fd(int nbr, int fd);
 void			ft_putstr(const char *str);
 void			ft_putstr_fd(const char *str, int fd);
+char			*ft_strcapitalize(char *str);
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strchr(const char *str, int c);
 void			ft_strclr(char *str);

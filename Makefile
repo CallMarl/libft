@@ -37,6 +37,7 @@ SRCS =./ft_atoi.c \
 	  ./ft_putnbr_fd.c \
 	  ./ft_putstr.c \
 	  ./ft_putstr_fd.c \
+	  ./ft_strcapitalize.c \
 	  ./ft_strcat.c \
 	  ./ft_strchr.c \
 	  ./ft_strclr.c \
