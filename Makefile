@@ -67,6 +67,7 @@ SRCS =./libft_binary/ft_base2.c \
 	  ./libft_display/ft_putnbr.c \
 	  ./libft_display/ft_putstr.c \
 	  ./libft_display/ft_putstr_u.c \
+	  ./libft_file/ft_gnl.c \
 	  ./libft_file/ft_putchar_fd.c \
 	  ./libft_file/ft_putendl_fd.c \
 	  ./libft_file/ft_putnbr_fd.c \
