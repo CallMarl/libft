@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/13 11:41:48 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/13 16:30:23 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,6 +208,8 @@ char				*ft_itoau_base(uintmax_t nbr, char *base);
 void				ft_strarr_del(char	**arr);
 int					ft_strarr_len(char **arr);
 int					ft_strarr_size(char **arr);
+char				*ft_strattach(const char *str1, const char *str2, \
+		const char *occ);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *str);
