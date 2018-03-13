@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/04 16:01:11 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/13 11:41:48 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 
 char				*ft_base2(unsigned char val, char *str);
 int					ft_printf(char *str, ...);
-void				ft_putbit(void *data, size_t n);
 void				ft_putbit_char(char val);
 void				ft_putbit_int(int val);
 void				ft_putbit_long(long val);
@@ -38,6 +37,7 @@ void				ft_putbit_ushort(unsigned short val);
 ** libft_display
 */
 
+void				ft_putbit(void *data, size_t n);
 void				ft_putchar(char c);
 short				ft_putchar_u(char *c);
 void				ft_putclear(void);
@@ -205,6 +205,9 @@ int					ft_isupper(int c);
 char				*ft_itoa(int nbr);
 char				*ft_itoa_base(intmax_t nbr, char *base);
 char				*ft_itoau_base(uintmax_t nbr, char *base);
+void				ft_strarr_del(char	**arr);
+int					ft_strarr_len(char **arr);
+int					ft_strarr_size(char **arr);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *str);
@@ -213,6 +216,7 @@ char				*ft_strcpy(char *dest, const char *src);
 void				ft_strdel(char **str);
 char				*ft_strdup(const char *s);
 int					ft_strequ(const char *s1, const char *s2);
+char				*ft_strimplode(char	**arr, char *occ);
 int					ft_strisdigit(char *str);
 int					ft_strisnumber(char *str);
 void				ft_striter(char *str, void (*f)(char *val));
@@ -220,6 +224,7 @@ void				ft_striteri(char *str,\
 		void (*f)(unsigned int val, char *s));
 char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
+size_t				*ft_strlcpy(char *dest, const char *src);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(const char *s, char (*f)(char c));
 char				*ft_strmapi(const char *s,\
