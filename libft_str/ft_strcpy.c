@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:57:41 by pprikazs          #+#    #+#             */
-/*   Updated: 2017/11/15 13:17:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/13 11:20:07 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** Crée une copie de la chaine src passé en parametre.
 */
 
-char		*ft_strcpy(char *dest, const char *src)
+extern char		*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
