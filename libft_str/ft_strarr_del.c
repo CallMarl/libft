@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 11:35:22 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/13 11:41:59 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/14 11:25:38 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ extern void		ft_strarr_del(char	**arr)
 	{
 		i = 0;
 		while (arr[i] != 0)
-			ft_strdel(arr[i++]);
-		ft_strmemdel((void **)arr);
+			ft_strdel(&arr[i++]);
+		ft_memdel((void **)arr);
 	}	
 }

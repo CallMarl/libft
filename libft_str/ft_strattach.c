@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 16:21:48 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/13 16:30:31 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/14 11:26:39 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ extern char		*ft_strattach(const char *str1, const char *str2, \
 {
 	char		*dest;
 	size_t		len;
-	int			i;
+	size_t		i;
 
 	if (str1 == 0 || str2 == 0)
-		return (0)
+		return (0);
 	len = ft_strlen(str1);
 	len += ft_strlen(str2);
 	if (occ != 0)

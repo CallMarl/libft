@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/13 16:30:23 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/14 12:00:41 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -226,7 +226,7 @@ void				ft_striteri(char *str,\
 		void (*f)(unsigned int val, char *s));
 char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
-size_t				*ft_strlcpy(char *dest, const char *src);
+size_t				ft_strlcpy(char *dest, const char *src);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(const char *s, char (*f)(char c));
 char				*ft_strmapi(const char *s,\
