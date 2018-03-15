@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/14 12:00:41 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/15 19:28:31 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -249,5 +249,23 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_unicode(wchar_t val);
 int					ft_unicode_str(wchar_t *str, char **uni);
+
+/*
+** libft_time
+*/
+
+typedef struct		s_tm
+{
+	int				sec;
+	int				min;
+	int				hr;
+	int				day;
+	int				month;
+	int				year;
+}					t_tm;
+
+t_tm			*ft_localtime(time_t *clock);
+t_tm			*ft_localtime_r(time_t *clock, t_tm *date);
+int				ft_time_count(time_t *clock, int time_type);
 
 #endif
