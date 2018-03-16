@@ -6,13 +6,13 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 19:14:53 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/15 19:22:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/16 12:06:03 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include "libft.h"
-#include "libft_times.h"
+#include "libft_time.h"
 
 extern void		ft_time_month(time_t *clock, t_tm *date, t_bool bisex)
 {

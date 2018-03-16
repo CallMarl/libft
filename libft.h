@@ -6,15 +6,22 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/15 19:28:31 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/16 15:35:42 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <sys/types.h>
 # include <stddef.h>
 # include <stdint.h>
+
+typedef enum		e_bool
+{
+	FALSE = 0,
+	TRUE = 1
+}					t_bool;
 
 /*
 ** libft_binary
@@ -254,14 +261,17 @@ int					ft_unicode_str(wchar_t *str, char **uni);
 ** libft_time
 */
 
+# define T_UTC 1
+
 typedef struct		s_tm
 {
 	int				sec;
 	int				min;
-	int				hr;
+	int				hour;
 	int				day;
 	int				month;
 	int				year;
+	int				nbd;
 }					t_tm;
 
 t_tm			*ft_localtime(time_t *clock);

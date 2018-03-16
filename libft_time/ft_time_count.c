@@ -6,12 +6,12 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 19:13:39 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/15 19:15:11 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/16 15:20:14 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
-#include "libft_times.h"
+#include "libft_time.h"
 
 extern int		ft_time_count(time_t *clock, int time_type)
 {
@@ -32,6 +32,6 @@ extern int		ft_time_count(time_t *clock, int time_type)
 	}
 	if (i == 0)
 		return (1);
-	(*clock) -= *svg;
-	return (i)
+	(*clock) -= svg;
+	return (i);
 }

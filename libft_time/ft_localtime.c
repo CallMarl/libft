@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 19:10:08 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/15 19:19:14 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/16 15:36:12 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ extern void		ft_time_day(time_t *clock, t_tm *date)
 		sec += T_DAY;
 		i++;
 	}
-	date->day = i;
-	(*clock) -= *svg;
+	date->day = i - 1;
+	(*clock) -= svg;
 }
 
 extern void		ft_time_hour(time_t *clock, t_tm *date)
@@ -51,8 +51,8 @@ extern void		ft_time_hour(time_t *clock, t_tm *date)
 		sec += T_HOUR;
 		i++;
 	}
-	date->hour = i;
-	(*clock) -= *svg;
+	date->hour = i - 1;
+	(*clock) -= svg;
 }
 
 extern void		ft_time_min(time_t *clock, t_tm *date)
@@ -70,10 +70,10 @@ extern void		ft_time_min(time_t *clock, t_tm *date)
 	{
 		svg = sec;
 		sec += T_MIN;
-		i++;
+	i++;
 	}
-	date->min = i;
-	(*clock) -= *svg;
+	date->min = i - 1;
+	(*clock) -= svg;
 }
 
 extern t_tm			*ft_localtime(time_t *clock)
@@ -82,8 +82,10 @@ extern t_tm			*ft_localtime(time_t *clock)
 	time_t			tmp;
 
 	tmp = *clock;
+	tmp += T_UTC * T_HOUR;
 	if (!(date = (t_tm *)ft_memalloc(sizeof(t_tm))))
 		return (0);
+	date->nbd = tmp / T_DAY;
 	ft_time_year(&tmp, date);
 	ft_time_month(&tmp, date, ft_isbisextil(date->year));
 	ft_time_day(&tmp, date);

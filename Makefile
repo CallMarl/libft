@@ -9,7 +9,8 @@ ifeq ($(DEBUG), yes)
 endif
 
 INCLUDES = -I./ \
-		   -I./libft_display/ft_printf/
+		   -I./libft_display/ft_printf/ \
+		   -I./libft_time/
 
 SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_binary/ft_putbit.c \
@@ -198,7 +199,13 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_tolower.c \
 	   ./libft_str/ft_toupper.c \
 	   ./libft_str/ft_unicode.c \
-	   ./libft_str/ft_unicode_str.c
+	   ./libft_str/ft_unicode_str.c \
+	   ./libft_time/ft_isbisextil.c \
+	   ./libft_time/ft_localtime.c \
+	   ./libft_time/ft_localtime_r.c \
+	   ./libft_time/ft_time_count.c \
+	   ./libft_time/ft_time_month.c \
+	   ./libft_time/ft_time_year.c
 
 OBJ = $(SRCS:%.c=%.o)
 DEPS = includes/*.h Makefile
@@ -223,5 +230,5 @@ fclean : clean
 	@$(RM) -f $(NAME)
 
 re :
-	$(MAKE) -C fclean
-	$(MAKE) -C all
+	@$(MAKE) fclean
+	@$(MAKE) all
