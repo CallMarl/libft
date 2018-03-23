@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 11:08:14 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/01/29 15:26:10 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/23 02:39:07 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** Donne la taille en octet d'un caractere unicode.
 */
 
-int			ft_charsize_u(wchar_t c)
+size_t			ft_charsize_u(wchar_t c)
 {
 	int				cpt;
 

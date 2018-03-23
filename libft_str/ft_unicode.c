@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 10:07:31 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/02/22 18:06:31 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/03/23 02:51:33 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char			*ft_conv_aux(wchar_t val, size_t size, char mask, char *c)
 	return (c);
 }
 
-static int			ft_conv(wchar_t car, int size, char *c)
+static int			ft_conv(wchar_t car, size_t size, char *c)
 {
 	char			mask;
 	int				tmp;
@@ -50,7 +50,7 @@ static int			ft_conv(wchar_t car, int size, char *c)
 		mask = ((mask >> 1) | 0x80);
 		tmp--;
 	}
-	if (size > MB_CUR_MAX || size < 0)
+	if (size > MB_CUR_MAX)
 		return (-1);
 	ft_conv_aux(car, size, mask, c);
 	return (0);
@@ -59,7 +59,7 @@ static int			ft_conv(wchar_t car, int size, char *c)
 extern char			*ft_unicode(wchar_t val)
 {
 	char	*c;
-	int		cpt;
+	size_t	cpt;
 
 	if (!(cpt = ft_charsize_u(val)))
 		return (0);
