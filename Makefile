@@ -132,6 +132,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_memory/ft_memchr.c \
 	   ./libft_memory/ft_memcmp.c \
 	   ./libft_memory/ft_memcpy.c \
+	   ./libft_memory/ft_memcpy_x.c \
 	   ./libft_memory/ft_memdel.c \
 	   ./libft_memory/ft_memdel_size.c \
 	   ./libft_memory/ft_memjunc.c \
@@ -219,7 +220,6 @@ DEPS = $(shell find -E . -regex ".*\.[ch]")
 	
 $(NAME) : $(OBJ) $(DEPS)
 	@$(CC) -rc $@ $^
-	@echo "libft.a compilé"
 
 all : $(NAME)
 

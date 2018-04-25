@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 12:14:34 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/04 16:03:20 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/25 16:34:50 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int		line_extend(char **str, char *tmp)
 		return (1);
 	}
 	len = ft_strlen(*str);
-	if (!(cpy = ft_strnew(sizeof(char) * len + 1)))
+	if (!(cpy = ft_strnew(len + 1)))
 		return (0);
 	ft_memcpy((void *)cpy, (void *)*str, sizeof(char) * (len + 1));
 	ft_memdel((void **)str);

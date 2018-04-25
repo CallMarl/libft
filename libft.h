@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/16 15:35:42 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/25 16:38:14 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,6 +180,7 @@ void				*ft_memccpy(void *ptrd, const void *ptrs, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memcpy(void *ptrd, const void *ptrs, size_t n);
+void				*ft_memcpy_x(void *ptrd, const void *ptrs, size_t n);
 void				ft_memdel(void **ptr);
 void				ft_memdel_size(void *content, size_t size);
 int					ft_memjunc(void *ptr1, void *ptr2, size_t n);

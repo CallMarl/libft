@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 12:51:28 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/01/29 17:28:03 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/23 12:36:54 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void			ft_lstdel_elem(t_list *elem)
 	while (size--)
 		*tmp++ = 0;
 	elem->size = 0;
+	ft_memdel(&elem->content);
 	ft_memdel((void **)&elem);
 }
