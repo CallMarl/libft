@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/25 16:38:14 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/25 17:22:48 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,7 +202,7 @@ int					ft_atoi(const char *str);
 long				ft_atol(const char *str);
 intmax_t			ft_atoim(const char *str);
 uintmax_t			ft_atoum(const char *str);
-int					ft_charsize_u(wchar_t c);
+size_t					ft_charsize_u(wchar_t c);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);

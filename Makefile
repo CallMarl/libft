@@ -210,13 +210,13 @@ SRCS = ./libft_binary/ft_base2.c \
 
 OBJ = $(SRCS:%.c=%.o)
 DEPS = includes/*.h Makefile
-DEPS = $(shell find -E . -regex ".*\.[ch]") 
+DEPS = $(shell find . -regex ".*\.[ch]") 
 
 .PHONY: all clean fclean re
 .SUFFIXES:
 
 %.o : %.c
-	@gcc $(INCLUDES) -c $< -o $@ $(FLAGS)
+	gcc $(INCLUDES) -c $< -o $@ $(FLAGS)
 	
 $(NAME) : $(OBJ) $(DEPS)
 	@$(CC) -rc $@ $^
