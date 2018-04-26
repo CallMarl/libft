@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/25 17:22:48 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/26 16:12:47 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,8 +227,8 @@ void				ft_strdel(char **str);
 char				*ft_strdup(const char *s);
 int					ft_strequ(const char *s1, const char *s2);
 char				*ft_strimplode(char	**arr, char *occ);
-int					ft_strisdigit(char *str);
-int					ft_strisnumber(char *str);
+int					ft_strisdigit(const char *str);
+int					ft_strisnumber(const char *str);
 void				ft_striter(char *str, void (*f)(char *val));
 void				ft_striteri(char *str,\
 		void (*f)(unsigned int val, char *s));
