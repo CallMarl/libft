@@ -63,6 +63,10 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_display/ft_putchar.c \
 	   ./libft_display/ft_putchar_u.c \
 	   ./libft_display/ft_putclear.c \
+	   ./libft_display/ft_putcolor_24.c \
+	   ./libft_display/ft_putcolor_8.c \
+	   ./libft_display/ft_putcolor_hex24.c \
+	   ./libft_display/ft_putcolor_hex8.c \
 	   ./libft_display/ft_putendl.c \
 	   ./libft_display/ft_putmemory.c \
 	   ./libft_display/ft_putnbr.c \

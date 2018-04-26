@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/26 16:12:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/26 17:18:41 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ void				ft_putbit(void *data, size_t n);
 void				ft_putchar(char c);
 short				ft_putchar_u(char *c);
 void				ft_putclear(void);
+void				ft_putcolor_24(const char *color, const char *str);
+void				ft_putcolor_8(const char *color, const char *str);
+void				ft_putcolor_hex24(long color, const char *str);
+void				ft_putcolor_hex8(long color, const char *str);
 void				ft_putendl(const char *str);
 void				ft_putmemory(void *ptr, size_t n);
 void				ft_putnbr(int nbr);
