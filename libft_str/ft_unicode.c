@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 10:07:31 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/23 02:51:33 by                  ###   ########.fr       */
+/*   Updated: 2018/04/26 16:33:02 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int			ft_conv(wchar_t car, size_t size, char *c)
 		mask = ((mask >> 1) | 0x80);
 		tmp--;
 	}
-	if (size > MB_CUR_MAX)
+	if ((long)size > MB_CUR_MAX)
 		return (-1);
 	ft_conv_aux(car, size, mask, c);
 	return (0);
