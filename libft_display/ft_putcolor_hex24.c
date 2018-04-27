@@ -6,11 +6,10 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:26:51 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/26 16:19:56 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/27 12:32:19 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "prog.h"
 #include "libft.h"
 
 static char		*ft_hexaconvertor_aux(char *tmp, int val)
@@ -33,7 +32,7 @@ static char		*ft_hexaconvertor(long color)
 	if (!(color_code = (char *)ft_memalloc(sizeof(char) * (19 + 1))))
 		return (0);
 	tmp = color_code;
-	tmp = ft_memcpy_x(tmp, "\33[38;2;", sizeof(char) * 7);
+	tmp = ft_memcpy_x(tmp, "\33[38;2", sizeof(char) * 6);
 	if (!(tmp = ft_hexaconvertor_aux(tmp, ((color >> 16) & 0xFF))))
 		return (0);
 	if (!(tmp = ft_hexaconvertor_aux(tmp, ((color >> 8) & 0xFF))))
@@ -53,7 +52,7 @@ extern void		ft_putcolor_hex24(long color, const char *str)
 	int		len;
 
 	len = (str != 0) ? ft_strlen(str) : 0;
-	if ((color_str = (char *)ft_memalloc(sizeof(char) * (23 + len + 1))))
+	if ((color_str = (char *)ft_memalloc(sizeof(char) * (22 + len + 1))))
 	{
 		tmp = color_str;
 		if (!!(color_code = ft_hexaconvertor(color)))
