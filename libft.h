@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/26 17:18:41 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/04/27 18:36:08 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,15 @@ void				ft_putstr_u(char *str);
 ** libft_file
 */
 
-# define FT_BUFF_SIZE 4096
+# define FT_BUFF_SIZE 32
 # define FT_MAX_FD 256
 
 typedef struct		s_buff
 {
 	char			*buff;
 	int				cr;
+	size_t			l_size;
+	int				b_size;
 }					t_buff;
 
 int					ft_gnl(int fd, char **line);
