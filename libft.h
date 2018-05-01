@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/27 18:36:08 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/01 18:58:57 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void				ft_putstr_u(char *str);
 ** libft_file
 */
 
-# define FT_BUFF_SIZE 32
+# define FT_BUFF_SIZE 4096
 # define FT_MAX_FD 256
 
 typedef struct		s_buff
@@ -189,6 +189,7 @@ void				*ft_memcpy(void *ptrd, const void *ptrs, size_t n);
 void				*ft_memcpy_x(void *ptrd, const void *ptrs, size_t n);
 void				ft_memdel(void **ptr);
 void				ft_memdel_size(void *content, size_t size);
+char				*ft_memjoin(const void *s1, const void *s2, size_t l1, size_t l2);
 int					ft_memjunc(void *ptr1, void *ptr2, size_t n);
 void				*ft_memmove(void *ptrd, const void *ptrs, size_t n);
 void				*ft_memset(void *ptr, int c, size_t n);

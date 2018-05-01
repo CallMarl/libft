@@ -139,6 +139,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_memory/ft_memcpy_x.c \
 	   ./libft_memory/ft_memdel.c \
 	   ./libft_memory/ft_memdel_size.c \
+	   ./libft_memory/ft_memjoin.c \
 	   ./libft_memory/ft_memjunc.c \
 	   ./libft_memory/ft_memmove.c \
 	   ./libft_memory/ft_memset.c \
