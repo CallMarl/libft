@@ -227,7 +227,7 @@ DEPS = $(shell find . -regex ".*\.[ch]")
 	gcc $(INCLUDES) -c $< -o $@ $(FLAGS)
 	
 $(NAME) : $(OBJ) $(DEPS)
-	@$(CC) -rc $@ $^
+	@$(CC) -rc $@ $(OBJ);
 
 all : $(NAME)
 
