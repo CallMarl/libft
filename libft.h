@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/01 18:58:57 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/07 14:27:03 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,23 @@ void				ft_putbit_ulong(unsigned long val);
 void				ft_putbit_ushort(unsigned short val);
 
 /*
+** libf_buff
+*/
+
+# define FT_BUFF_SIZE 4096
+
+typedef struct		s_buff
+{
+	void			*buff;
+	size_t			cr;
+	size_t			e_size;
+	size_t			b_size;
+}					t_buff;
+
+int					ft_buffadd(t_buff *buff, const void *elem);
+void				ft_buffdel(t_buff *buff);
+int					ft_buffinit(t_buff *buff, unsigned int nb, size_t (*size)(void));
+/*
 ** libft_display
 */
 
@@ -62,16 +79,7 @@ void				ft_putstr_u(char *str);
 ** libft_file
 */
 
-# define FT_BUFF_SIZE 4096
 # define FT_MAX_FD 256
-
-typedef struct		s_buff
-{
-	char			*buff;
-	int				cr;
-	size_t			l_size;
-	int				b_size;
-}					t_buff;
 
 int					ft_gnl(int fd, char **line);
 void				ft_putchar_fd(char c, int fd);

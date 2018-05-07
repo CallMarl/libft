@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 12:14:34 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/01 18:55:28 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/07 11:18:11 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,28 @@ static int		ft_memextend(void **m1, const void *m2, \
 static int		read_buff(char *tmp, t_buff *f, char **str)
 {
 	int			i;
+	char		*b_tmp;
 
 	i = f->cr;
-	while (f->cr < f->b_size && f->buff[f->cr] != '\n' && f->buff[f->cr] != -1)
+	b_tmp = (char *)(f->buff);
+	while (f->cr < f->b_size && b_tmp[f->cr] != '\n' && b_tmp[f->cr] != -1)
 	{
 		ft_memcpy((void *)&tmp[f->cr - i], (void *)&(f->buff[f->cr]), \
 				sizeof(char));
 		(f->cr)++;
 	}
-	if (f->cr < f->b_size && (f->buff[f->cr] == '\n' || f->buff[f->cr] == -1))
+	if (f->cr < f->b_size && (b_tmp[f->cr] == '\n' || b_tmp[f->cr] == -1))
 		(f->cr)++;
-	if (!(f->l_size = ft_memextend((void **)str, (void *)tmp, \
-					f->l_size, f->cr - i)))
+	if (!(f->e_size = ft_memextend((void **)str, (void *)tmp, \
+					f->e_size, f->cr - i)))
 		return (-1);
-	else if (f->buff[f->cr - 1] == '\n' || (f->buff[f->cr - 1] == -1 \
-			&& f->l_size > 0 && f->cr < f->b_size))
-		return (f->l_size);
+	else if (b_tmp[f->cr - 1] == '\n' || (b_tmp[f->cr - 1] == -1 \
+			&& f->e_size > 0 && f->cr < f->b_size))
+		return (f->e_size);
 	return (0);
 }
 
-static int		ini_buff(int fd, char **buff, int *cr, int *b_size)
+static int		ini_buff(int fd, void **buff, size_t *cr, size_t *b_size)
 {
 	int ret;
 
@@ -83,7 +85,7 @@ static int		return_value(int fd, char **line, t_buff *f, char *str)
 
 	while (1)
 	{
-		if (f->cr >= f->b_size || f->cr == -1)
+		if (f->cr >= f->b_size || f->buff == 0)
 		{
 			if ((ret = ini_buff(fd, &(f->buff), &(f->cr), &(f->b_size))) == 0)
 				break ;
@@ -98,9 +100,9 @@ static int		return_value(int fd, char **line, t_buff *f, char *str)
 	if (ret == 0 && tmp[0] != 0 && f->b_size == 1)
 	{
 		tmp[0] = 0;
-		ret = f->l_size;
+		ret = f->e_size;
 	}
-	ret = f->l_size;
+	ret = f->e_size;
 	*line = str;
 	return (ret);
 }
@@ -111,10 +113,8 @@ extern int		ft_gnl(int fd, char **line)
 	char			*str;
 
 	str = NULL;
-	file[fd].l_size = 0;
+	file[fd].e_size = 0;
 	if (!line || fd < 0 || FT_MAX_FD <= fd)
 		return (-1);
-	if (file[fd].buff == NULL)
-		file[fd].cr = -1;
 	return (return_value(fd, line, &file[fd], str));
 }

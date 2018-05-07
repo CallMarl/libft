@@ -22,6 +22,9 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_binary/ft_putbit_uint.c \
 	   ./libft_binary/ft_putbit_ulong.c \
 	   ./libft_binary/ft_putbit_ushort.c \
+	   ./libft_buff/ft_buffadd.c \
+	   ./libft_buff/ft_buffdel.c \
+	   ./libft_buff/ft_buffinit.c \
 	   ./libft_display/ft_printf/extra/ft_lstiter_andsum.c \
 	   ./libft_display/ft_printf/ft_analyze_flag.c \
 	   ./libft_display/ft_printf/ft_args.c \
