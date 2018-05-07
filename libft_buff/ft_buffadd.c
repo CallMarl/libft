@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/07 11:53:15 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/07 17:10:59 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/08 00:06:06 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ extern int			ft_buffadd(t_buff *buff, const void *elem)
 		return (-1);
 	if (buff->cr >= buff->b_size)
 		return (0);
-	ft_memcpy(&(buff->buff[buff->cr * buff->e_size]), elem, buff->e_size);
+	ft_memcpy(&(((char *)buff->buff)[buff->cr * buff->e_size]), elem, buff->e_size);
 	buff->cr++;
 	return (1);
 }

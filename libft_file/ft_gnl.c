@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 12:14:34 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/07 11:18:11 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/08 00:09:04 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int		read_buff(char *tmp, t_buff *f, char **str)
 	b_tmp = (char *)(f->buff);
 	while (f->cr < f->b_size && b_tmp[f->cr] != '\n' && b_tmp[f->cr] != -1)
 	{
-		ft_memcpy((void *)&tmp[f->cr - i], (void *)&(f->buff[f->cr]), \
+		ft_memcpy((void *)&tmp[f->cr - i], (void *)&(b_tmp[f->cr]), \
 				sizeof(char));
 		(f->cr)++;
 	}
