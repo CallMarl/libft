@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/07 14:27:03 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/08 19:37:55 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,6 +182,8 @@ t_dlist				*ft_rlstset_heap(t_rot *rot);
 
 int					ft_next_sqrt(int nb);
 int					ft_pow(int x, int y);
+void				ft_qsort(void *base, size_t nel, size_t width, \
+		int (*cmp)(const void *, const void *));
 int					ft_sqrt(int nb);
 
 /*
@@ -201,6 +203,7 @@ char				*ft_memjoin(const void *s1, const void *s2, size_t l1, size_t l2);
 int					ft_memjunc(void *ptr1, void *ptr2, size_t n);
 void				*ft_memmove(void *ptrd, const void *ptrs, size_t n);
 void				*ft_memset(void *ptr, int c, size_t n);
+void				ft_memswap(void *s1, void *s2, size_t width);
 
 /*
 ** libft_str
