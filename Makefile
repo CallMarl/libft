@@ -132,7 +132,6 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_lst/ft_rlstset_heap.c \
 	   ./libft_math/ft_next_sqrt.c \
 	   ./libft_math/ft_pow.c \
-	   ./libft_math/ft_qsort.c \
 	   ./libft_math/ft_sqrt.c \
 	   ./libft_memory/ft_bzero.c \
 	   ./libft_memory/ft_memalloc.c \
@@ -155,6 +154,10 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_nbr/ft_issort_c.c \
 	   ./libft_nbr/ft_issort_d.c \
 	   ./libft_nbr/ft_swap_uint.c \
+	   ./libft_sort/ft_qsort.c \
+	   ./libft_sort/ft_sort_intcmp_c.c \
+	   ./libft_sort/ft_sort_strcmp_c.c \
+	   ./libft_sort/ft_qsort.c \
 	   ./libft_str/ft_atoi.c \
 	   ./libft_str/ft_atoim.c \
 	   ./libft_str/ft_atol.c \

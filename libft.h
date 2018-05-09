@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/08 19:37:55 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/09 14:54:19 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,8 +182,6 @@ t_dlist				*ft_rlstset_heap(t_rot *rot);
 
 int					ft_next_sqrt(int nb);
 int					ft_pow(int x, int y);
-void				ft_qsort(void *base, size_t nel, size_t width, \
-		int (*cmp)(const void *, const void *));
 int					ft_sqrt(int nb);
 
 /*
@@ -204,6 +202,16 @@ int					ft_memjunc(void *ptr1, void *ptr2, size_t n);
 void				*ft_memmove(void *ptrd, const void *ptrs, size_t n);
 void				*ft_memset(void *ptr, int c, size_t n);
 void				ft_memswap(void *s1, void *s2, size_t width);
+
+/*
+** libft_qsort
+*/
+
+
+void				ft_qsort(void *base, size_t nel, size_t width, \
+		int (*cmp)(const void *, const void *));
+int					ft_sort_intcmp_c(const void *v1, const void *v2);
+int					ft_sort_strcmp_c(const void *v1, const void *v2);
 
 /*
 ** libft_str
