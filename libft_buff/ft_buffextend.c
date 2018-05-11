@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/11 13:49:02 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/11 14:20:36 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/11 14:32:41 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ extern int			ft_buffextend(t_buff *buff, size_t nb)
 	ft_memcpy(new, buff->buff, buff->b_size * buff->e_size);
 	ft_memdel((void **)&buff->buff);
 	buff->buff = new;
+	buff->b_size = new_size;
 	return (1);
 }
