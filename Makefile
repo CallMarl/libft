@@ -183,6 +183,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_strclr.c \
 	   ./libft_str/ft_strcmp.c \
 	   ./libft_str/ft_strcpy.c \
+	   ./libft_str/ft_strcpy_x.c \
 	   ./libft_str/ft_strdel.c \
 	   ./libft_str/ft_strdup.c \
 	   ./libft_str/ft_strequ.c \
