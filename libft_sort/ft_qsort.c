@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 19:33:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/08 19:38:07 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/15 20:50:57 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,25 @@ extern void			ft_qsort(void *base, size_t nel, size_t width, \
 {
 	size_t			i;
 	size_t			piv;
+	unsigned char		*tmp;
 
+	tmp = (unsigned char *)base;
 	if (nel <= 0)
 		return ;
 	i = width;
 	piv = 0;
-	ft_memswap(base, &base[(nel / 2) * width], width);
+	ft_memswap(tmp, &tmp[(nel / 2) * width], width);
 	while (i < (nel) * width)
 	{
-		if ((*cmp)(&base[i], base) < 0)
+		if ((*cmp)((void *)&tmp[i], (void *)tmp) < 0)
 		{
 			piv += width;
-			ft_memswap(&base[i], &base[piv], width);
+			ft_memswap(&tmp[i], &tmp[piv], width);
 		}
 		i += width;
 	}
-	ft_memswap(base, &base[piv], width);
+	ft_memswap(tmp, &tmp[piv], width);
 	if (piv != 0)
-		ft_qsort(base, piv / width, width, cmp);
-	ft_qsort(&base[piv + width], nel - ((piv / width) + 1), width, cmp); 
+		ft_qsort(tmp, piv / width, width, cmp);
+	ft_qsort((void *)&tmp[piv + width], nel - ((piv / width) + 1), width, cmp);
 }

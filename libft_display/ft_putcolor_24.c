@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:40:05 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/27 12:30:13 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/15 21:34:02 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ extern void		ft_putcolor_24(const char *color, const char *str)
 	if (ft_checkcolor_code(color) == 1)
 	{			
 		len = (str != 0) ? ft_strlen(str) : 0;
-		if ((color_str = (char *)ft_memalloc(sizeof(char) * (22 + len + 1))))
+		if ((color_str = (char *)ft_memalloc(sizeof(char) * (23 + len + 1))))
 		{
 			tmp = color_str;
 			tmp = ft_memcpy_x(tmp, "\33[38;2;", sizeof(char) * 7);
@@ -51,7 +51,7 @@ extern void		ft_putcolor_24(const char *color, const char *str)
 			tmp = ft_memcpy_x(tmp, "\33[0m", sizeof(char) * 4);
 			*tmp = '\0';
 			ft_putstr(color_str);
-			ft_strdel((char **)&color_str);
+			ft_strdel(&color_str);
 		}
 	}
 }

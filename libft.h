@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/16 19:24:24 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 13:15:30 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,8 +162,12 @@ int					ft_lstpush(t_list **alst, void *data, \
 void				ft_lstpushb(t_list **alst, t_list *new_one);
 void				ft_lstpushf(t_list **alst, t_list *new_one);
 t_list				*ft_lstrecover(t_list *alst, int indice);
+<<<<<<< HEAD
 void				ft_lstremove(t_list **alst, int indice, \
 		void (*del)(void *elem));
+=======
+void			ft_lstremove(t_list **alst, int indice, void (*del)(void *elem));
+>>>>>>> 3a34792cb949089b981d0fa4c3dd427d39f39fea
 t_list				*ft_lstreplace(t_list **alst, t_list *elem, int indice);
 int					ft_lstset(t_list *alst, t_content content, int indice);
 int					ft_lstsize(t_list *begin_list);
