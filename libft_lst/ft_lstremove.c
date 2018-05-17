@@ -6,13 +6,13 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 12:46:47 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/01/29 17:29:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/16 19:22:38 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_lstremove(t_list **alst, int indice)
+void			ft_lstremove(t_list **alst, int indice, void (*del)(void *elem))
 {
 	t_list		*tmp;
 	t_list		*rem;
@@ -34,6 +34,7 @@ void			ft_lstremove(t_list **alst, int indice)
 			rem = tmp->next;
 			tmp->next = rem->next;
 		}
-		ft_lstdel_elem(rem);
+		del(rem);
+		ft_memdel((void **)&rem);
 	}
 }
