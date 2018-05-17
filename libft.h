@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/17 13:15:30 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:03:07 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,12 +162,8 @@ int					ft_lstpush(t_list **alst, void *data, \
 void				ft_lstpushb(t_list **alst, t_list *new_one);
 void				ft_lstpushf(t_list **alst, t_list *new_one);
 t_list				*ft_lstrecover(t_list *alst, int indice);
-<<<<<<< HEAD
 void				ft_lstremove(t_list **alst, int indice, \
 		void (*del)(void *elem));
-=======
-void			ft_lstremove(t_list **alst, int indice, void (*del)(void *elem));
->>>>>>> 3a34792cb949089b981d0fa4c3dd427d39f39fea
 t_list				*ft_lstreplace(t_list **alst, t_list *elem, int indice);
 int					ft_lstset(t_list *alst, t_content content, int indice);
 int					ft_lstsize(t_list *begin_list);
@@ -203,7 +199,8 @@ void				*ft_memcpy(void *ptrd, const void *ptrs, size_t n);
 void				*ft_memcpy_x(void *ptrd, const void *ptrs, size_t n);
 void				ft_memdel(void **ptr);
 void				ft_memdel_size(void *content, size_t size);
-char				*ft_memjoin(const void *s1, const void *s2, size_t l1, size_t l2);
+char				*ft_memjoin(const void *s1, const void *s2, size_t l1, \
+		size_t l2);
 int					ft_memjunc(void *ptr1, void *ptr2, size_t n);
 void				*ft_memmove(void *ptrd, const void *ptrs, size_t n);
 void				*ft_memset(void *ptr, int c, size_t n);
@@ -212,7 +209,6 @@ void				ft_memswap(void *s1, void *s2, size_t width);
 /*
 ** libft_qsort
 */
-
 
 void				ft_qsort(void *base, size_t nel, size_t width, \
 		int (*cmp)(const void *, const void *));
@@ -308,8 +304,8 @@ typedef struct		s_tm
 	int				nbd;
 }					t_tm;
 
-t_tm			*ft_localtime(time_t *clock);
-t_tm			*ft_localtime_r(time_t *clock, t_tm *date);
-int				ft_time_count(time_t *clock, int time_type);
+t_tm				*ft_localtime(time_t *clock);
+t_tm				*ft_localtime_r(time_t *clock, t_tm *date);
+int					ft_time_count(time_t *clock, int time_type);
 
 #endif

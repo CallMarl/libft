@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 18:46:24 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/03 15:55:56 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:55:44 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ static int			ft_conv(wchar_t car, size_t size, char *str)
 	return (0);
 }
 
-extern int		ft_unicode_str(wchar_t *str, char **uni)
+extern int			ft_unicode_str(wchar_t *str, char **uni)
 {
-	int		i;
-	int		cpt;
-	size_t		tmp;
+	int				i;
+	int				cpt;
+	size_t			tmp;
 
 	if ((cpt = ft_strsize_u(str)) < 0)
 		return (-1);

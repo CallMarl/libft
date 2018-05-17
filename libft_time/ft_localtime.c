@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 19:10:08 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/16 15:36:12 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:53:13 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,13 @@ extern void		ft_time_min(time_t *clock, t_tm *date)
 	{
 		svg = sec;
 		sec += T_MIN;
-	i++;
+		i++;
 	}
 	date->min = i - 1;
 	(*clock) -= svg;
 }
 
-extern t_tm			*ft_localtime(time_t *clock)
+extern t_tm		*ft_localtime(time_t *clock)
 {
 	t_tm			*date;
 	time_t			tmp;

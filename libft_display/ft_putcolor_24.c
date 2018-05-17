@@ -6,11 +6,9 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:40:05 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/15 21:34:02 by                  ###   ########.fr       */
+/*   Updated: 2018/05/17 18:02:18 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -39,7 +37,7 @@ extern void		ft_putcolor_24(const char *color, const char *str)
 	int			len;
 
 	if (ft_checkcolor_code(color) == 1)
-	{			
+	{
 		len = (str != 0) ? ft_strlen(str) : 0;
 		if ((color_str = (char *)ft_memalloc(sizeof(char) * (23 + len + 1))))
 		{

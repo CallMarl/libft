@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 19:07:52 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/16 12:00:27 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:53:19 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ extern t_bool		ft_isbisextil(short date)
 		bisex = FALSE;
 	return (bisex);
 }
-

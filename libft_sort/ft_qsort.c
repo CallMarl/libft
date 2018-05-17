@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 19:33:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/15 20:50:57 by                  ###   ########.fr       */
+/*   Updated: 2018/05/17 17:59:37 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 
 /*
-** Fonction de trie rapide avec le pivot qui est l'indice du milieux du 
+** Fonction de trie rapide avec le pivot qui est l'indice du milieux du
 ** tableau
 */
 
@@ -23,7 +23,7 @@ extern void			ft_qsort(void *base, size_t nel, size_t width, \
 {
 	size_t			i;
 	size_t			piv;
-	unsigned char		*tmp;
+	unsigned char	*tmp;
 
 	tmp = (unsigned char *)base;
 	if (nel <= 0)

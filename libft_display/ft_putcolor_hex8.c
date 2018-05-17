@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 15:20:30 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/26 16:37:11 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:00:50 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static char		*ft_hexaconvertor(uint8_t color)
 	char		*color_code;
 	char		*tmp;
 	char		*rgb_val;
-
 
 	if (!(color_code = (char *)ft_memalloc(sizeof(char) * (6 + 1))))
 		return (0);
@@ -44,7 +43,8 @@ extern void		ft_putcolor_hex8(long color, const char *str)
 		tmp = color_str;
 		if (!!(color_code = ft_hexaconvertor(color)))
 		{
-			tmp = ft_memcpy_x(tmp, color_code, sizeof(char) * ft_strlen(color_code));
+			tmp = ft_memcpy_x(tmp, color_code, \
+					sizeof(char) * ft_strlen(color_code));
 			ft_strdel((char **)&color_code);
 		}
 		if (len > 0)

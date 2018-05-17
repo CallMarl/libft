@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 09:44:53 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/13 11:34:05 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 17:57:32 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ static int		ft_implode_len(char **arr, char *occ)
 	return (len);
 }
 
-extern char		*ft_strimplode(char	**arr, char *occ)
+extern char		*ft_strimplode(char **arr, char *occ)
 {
-	int		len;
-	char	*imp;
-	char	**tmp;
-	int		i;
+	int			len;
+	char		*imp;
+	char		**tmp;
+	int			i;
 
 	len = ft_implode_len(arr, occ);
-	if (!(imp =(char *)ft_memalloc(sizeof(char) * len + 1)))
+	if (!(imp = (char *)ft_memalloc(sizeof(char) * len + 1)))
 		return (0);
 	i = 0;
 	tmp = arr;

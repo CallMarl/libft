@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:26:51 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/27 12:32:19 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:01:04 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ extern void		ft_putcolor_hex24(long color, const char *str)
 		tmp = color_str;
 		if (!!(color_code = ft_hexaconvertor(color)))
 		{
-			tmp = ft_memcpy_x(tmp, color_code, sizeof(char) * ft_strlen(color_code));
+			tmp = ft_memcpy_x(tmp, color_code, \
+					sizeof(char) * ft_strlen(color_code));
 			ft_strdel((char **)&color_code);
 		}
 		if (len > 0)

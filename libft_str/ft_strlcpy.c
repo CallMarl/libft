@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:30:28 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/14 11:26:52 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:06:38 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 extern size_t			ft_strlcpy(char *dest, const char *src)
 {
-	size_t			 i;
+	size_t				i;
 
 	i = 0;
 	while (src[i] != '\0')

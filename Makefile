@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = ar
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -O3
 
 ROOT = $(shell dirname `pwd`)
 DEBUG = no

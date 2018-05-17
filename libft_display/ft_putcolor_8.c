@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:26:34 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/04/26 17:19:57 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/17 18:05:32 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 static int		ft_checkcolor_code(const char *color)
 {
 	int			val;
+
 	if (color == 0)
 		return (0);
 	if (!ft_strisdigit(color))
@@ -33,7 +34,7 @@ extern void		ft_putcolor_8(const char *color, const char *str)
 	int			len;
 
 	if (ft_checkcolor_code(color) == 1)
-	{			
+	{
 		len = (str != 0) ? ft_strlen(str) : 0;
 		if ((color_str = (char *)ft_memalloc(sizeof(char) * (10 + len + 1))))
 		{
