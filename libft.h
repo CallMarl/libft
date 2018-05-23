@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/22 10:56:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/23 15:54:17 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ typedef struct		s_buff
 int					ft_buffadd(t_buff *buff, const void *elem);
 int					ft_buffextend(t_buff *buff, size_t nb);
 void				ft_buffdel(t_buff *buff);
-int					ft_buffinit(t_buff *buff, size_t nb, size_t (*size)(void));
+int					ft_buffinit(t_buff *buff, size_t nb, size_t size);
 /*
 ** libft_display
 */
