@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 12:14:34 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/17 17:59:43 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:22:03 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int		ft_memextend(void **m1, const void *m2, \
 
 	if (*m1 == 0)
 	{
-		if (!(*m1 = ft_memalloc(sizeof(char) * m2_size)))
+		if (!(*m1 = ft_memalloc(sizeof(char) * m2_size + 1)))
 			return (-1);
 		*m1 = ft_memcpy(*m1, m2, m2_size);
 		return (m2_size);
@@ -30,6 +30,7 @@ static int		ft_memextend(void **m1, const void *m2, \
 	cpy = ft_memcpy(cpy, *m1, sizeof(char) * m1_size);
 	ft_memdel((void **)m1);
 	*m1 = ft_memjoin(cpy, m2, m1_size, m2_size);
+	ft_putnbr(m1_size + m2_size);
 	ft_memdel((void **)&cpy);
 	return (m1_size + m2_size);
 }
@@ -47,8 +48,11 @@ static int		read_buff(char *tmp, t_buff *f, char **str)
 				sizeof(char));
 		(f->cr)++;
 	}
-	if (f->cr < f->b_size && (b_tmp[f->cr] == '\n' || b_tmp[f->cr] == -1))
+	if (f->cr < f->b_size && (b_tmp[f->cr] == '\n' || b_tmp[f->cr] == 0))
+	{
+		tmp[f->cr - i] =  0;
 		(f->cr)++;
+	}
 	if (!(f->e_size = ft_memextend((void **)str, (void *)tmp, \
 					f->e_size, f->cr - i)))
 		return (-1);
@@ -102,6 +106,7 @@ static int		return_value(int fd, char **line, t_buff *f, char *str)
 		tmp[0] = 0;
 		ret = f->e_size;
 	}
+	(f->cr)++;
 	ret = f->e_size;
 	*line = str;
 	return (ret);
