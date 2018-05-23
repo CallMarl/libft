@@ -6,9 +6,11 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 09:49:26 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/03/13 09:56:25 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:13:44 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 extern int			ft_strarr_size(char **arr)
 {
@@ -19,7 +21,7 @@ extern int			ft_strarr_size(char **arr)
 	if (arr == 0)
 		return (size);
 	tmp = arr;
-	while (tmp != 0)
+	while (*tmp != 0)
 	{
 		size++;
 		tmp++;
