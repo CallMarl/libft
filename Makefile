@@ -187,6 +187,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_strdel.c \
 	   ./libft_str/ft_strdup.c \
 	   ./libft_str/ft_strequ.c \
+	   ./libft_str/ft_strexplode.c \
 	   ./libft_str/ft_strimplode.c \
 	   ./libft_str/ft_strisdigit.c \
 	   ./libft_str/ft_strisnumber.c \
