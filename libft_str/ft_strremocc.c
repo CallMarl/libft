@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iswiw.c                                         :+:      :+:    :+:   */
+/*   ft_strremocc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/25 15:16:37 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/25 18:20:20 by pprikazs         ###   ########.fr       */
+/*   Created: 2018/05/25 18:10:43 by pprikazs          #+#    #+#             */
+/*   Updated: 2018/05/25 18:31:19 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** ft_iswiw permet de vérifié si le caractere c et bien un caractere ou non
-** de la chaine wiw (what i want)
+** Supprime tout les occurence occ présente dans al chaine str
 */
 
-extern int			ft_iswiw(char c, const char *wiw)
+extern char			*ft_strremocc(char *str, const char *occ)
 {
-	while (*wiw)
+	int				i;
+	int				y;
+
+	if (str == 0)
+		return (str);
+	i = 0;
+	y = 0;
+	while (str[i] != '\0')
 	{
-		if (c == *wiw)
-			return (1);
-		wiw++;
+		if (ft_iswiw(str[i], occ))
+			y++;
+		else
+			str[i - y] = str[i];
+		i++;
 	}
-	return (0);
+	i -= y;
+	while (str[i] != '\0')
+		str[i++] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/25 16:46:15 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/25 18:20:08 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -240,7 +240,7 @@ int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isspace(char c);
 int					ft_isupper(int c);
-int					ft_iswiw(char c, char *wiw);
+int					ft_iswiw(char c, const char *wiw);
 char				*ft_itoa(int nbr);
 char				*ft_itoa_base(intmax_t nbr, char *base);
 char				*ft_itoau_base(uintmax_t nbr, char *base);
@@ -274,6 +274,7 @@ char				*ft_strmapi(const char *s,\
 		char (*f)(unsigned int val, char c));
 char				*ft_strncat(char *dest, const char *src, int nbr);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+char				*ft_strremocc(char *str, const char *occ);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 int					ft_strnequ(const char *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
@@ -287,6 +288,7 @@ char				*ft_strstr(const char *str, const char *to_find);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 void				ft_strsup(char *s, int cr);
 char				*ft_strtrim(const char *s1);
+char				*ft_strunsurrond(char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_unicode(wchar_t val);

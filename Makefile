@@ -209,6 +209,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_strnew.c \
 	   ./libft_str/ft_strnew_c.c \
 	   ./libft_str/ft_strnstr.c \
+	   ./libft_str/ft_strremocc.c \
 	   ./libft_str/ft_strrchr.c \
 	   ./libft_str/ft_strsanitize.c \
 	   ./libft_str/ft_strsize_u.c \
@@ -216,6 +217,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_strstr.c \
 	   ./libft_str/ft_strsub.c \
 	   ./libft_str/ft_strsup.c \
+	   ./libft_str/ft_strunsurrond.c \
 	   ./libft_str/ft_strtrim.c \
 	   ./libft_str/ft_tolower.c \
 	   ./libft_str/ft_toupper.c \
