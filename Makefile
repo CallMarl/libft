@@ -173,6 +173,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_isprint.c \
 	   ./libft_str/ft_isspace.c \
 	   ./libft_str/ft_isupper.c \
+	   ./libft_str/ft_iswiw.c \
 	   ./libft_str/ft_itoa.c \
 	   ./libft_str/ft_itoa_base.c \
 	   ./libft_str/ft_itoau_base.c \

@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/25 14:46:29 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/25 15:24:18 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -240,6 +240,7 @@ int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isspace(char c);
 int					ft_isupper(int c);
+int					ft_iswiw(char c, char *wiw);
 char				*ft_itoa(int nbr);
 char				*ft_itoa_base(intmax_t nbr, char *base);
 char				*ft_itoau_base(uintmax_t nbr, char *base);
