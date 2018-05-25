@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/25 15:24:18 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/25 16:46:15 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,7 +244,7 @@ int					ft_iswiw(char c, char *wiw);
 char				*ft_itoa(int nbr);
 char				*ft_itoa_base(intmax_t nbr, char *base);
 char				*ft_itoau_base(uintmax_t nbr, char *base);
-void				ft_strarr_del(char	**arr);
+void				ft_strarr_del(char ***arr);
 int					ft_strarr_len(char **arr);
 int					ft_strarr_size(char **arr);
 char				*ft_strattach(const char *str1, const char *str2, \
