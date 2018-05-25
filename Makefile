@@ -209,6 +209,7 @@ SRCS = ./libft_binary/ft_base2.c \
 	   ./libft_str/ft_strnew_c.c \
 	   ./libft_str/ft_strnstr.c \
 	   ./libft_str/ft_strrchr.c \
+	   ./libft_str/ft_strsanitize.c \
 	   ./libft_str/ft_strsize_u.c \
 	   ./libft_str/ft_strsplit.c \
 	   ./libft_str/ft_strstr.c \

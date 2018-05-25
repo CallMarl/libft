@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/25 12:48:56 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/05/25 14:46:29 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -279,6 +279,7 @@ char				*ft_strnew(size_t size);
 char				*ft_strnew_c(size_t size, char c);
 char				*ft_strnstr(const char *str, const char *to_find, size_t n);
 char				*ft_strrchr(const char *str, int c);
+void				ft_strsanitize(char *str, const char *car);
 int					ft_strsize_u(wchar_t *str);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strstr(const char *str, const char *to_find);
