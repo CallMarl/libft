@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_buffadd.c                                       :+:      :+:    :+:   */
+/*   ft_buffinsert.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/07 11:53:15 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/23 17:33:47 by pprikazs         ###   ########.fr       */
+/*   Created: 2018/05/23 16:18:53 by pprikazs          #+#    #+#             */
+/*   Updated: 2018/05/23 17:18:15 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Insert une copie de elem dans le buff à un emplacement libre, si le buffeur
-** est plein la fonction retourn zero.
-*/
-
-extern int			ft_buffadd(t_buff *buff, const void *elem)
+extern int			ft_buffinsert(t_buff *buff, void *elem, size_t ext)
 {
+	int				i;
+	int				ret;
+
 	if (buff == 0)
-		return (-1);
-	if (buff->cr >= buff->b_size)
 		return (0);
-	ft_memcpy(buff->buff + (buff->cr * buff->e_size), \
-			elem, buff->e_size);
-	buff->cr++;
-	return (1);
+	i = 0;
+	ret = 1;
+	while (ret >= 0 && (ret = ft_buffadd(buff, elem)) <= 0 && i < 1)
+	{
+		if (ret == 0)
+			ret = ft_buffextend(buff, ext);
+		else
+			return (ret);
+		i++;
+	}
+	return (ret);
 }
