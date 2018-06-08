@@ -6,15 +6,16 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 09:49:26 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/23 12:13:44 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/06/04 14:11:55 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
-extern int			ft_strarr_size(char **arr)
+extern size_t		ft_strarr_size(char **arr)
 {
-	int		size;
+	size_t		size;
 	char	**tmp;
 
 	size = 0;

@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/25 18:20:08 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/06/04 14:11:47 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -246,7 +246,7 @@ char				*ft_itoa_base(intmax_t nbr, char *base);
 char				*ft_itoau_base(uintmax_t nbr, char *base);
 void				ft_strarr_del(char ***arr);
 int					ft_strarr_len(char **arr);
-int					ft_strarr_size(char **arr);
+size_t				ft_strarr_size(char **arr);
 char				*ft_strattach(const char *str1, const char *str2, \
 		const char *occ);
 char				*ft_strcat(char *dest, const char *src);
@@ -259,6 +259,7 @@ void				ft_strdel(char **str);
 char				*ft_strdup(const char *s);
 int					ft_strequ(const char *s1, const char *s2);
 char				**ft_strexplode(char const *s, char *c);
+char				*ft_strextend(char *dest, char *ext);
 char				*ft_strimplode(char	**arr, char *occ);
 int					ft_strisdigit(const char *str);
 int					ft_strisnumber(const char *str);
@@ -274,7 +275,6 @@ char				*ft_strmapi(const char *s,\
 		char (*f)(unsigned int val, char c));
 char				*ft_strncat(char *dest, const char *src, int nbr);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-char				*ft_strremocc(char *str, const char *occ);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 int					ft_strnequ(const char *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
@@ -288,7 +288,6 @@ char				*ft_strstr(const char *str, const char *to_find);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 void				ft_strsup(char *s, int cr);
 char				*ft_strtrim(const char *s1);
-char				*ft_strunsurrond(char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_unicode(wchar_t val);
