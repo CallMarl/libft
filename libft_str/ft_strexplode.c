@@ -6,14 +6,14 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 10:55:27 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/22 10:58:16 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/06/29 14:35:42 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int			in_str(char c, char *str)
+static int			in_str(char c, char *str)
 {
 	int		i;
 
