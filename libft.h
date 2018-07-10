@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/07/10 14:36:16 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/07/10 17:34:07 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ void				ft_putbit_ushort(unsigned short val);
 
 typedef struct		s_buff
 {
-	void			*buff;
 	size_t			cr;
 	size_t			e_size;
 	size_t			b_size;
+	void			*buff;
 }					t_buff;
 
 int					ft_buffadd(t_buff *buff, const void *elem);
