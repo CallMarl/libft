@@ -6,9 +6,12 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 14:31:13 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/07/10 14:33:09 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/07/10 14:37:00 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <fcntl.h>
 
 static int			ft_useraccess(int right)
 {

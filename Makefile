@@ -96,11 +96,12 @@ SRCS += ft_bigc.c \
 	   ft_undef.c \
 	   ft_x.c
 #./libft_file/
-SRCS += ft_gnl.c \
-	   ft_putchar_fd.c \
-	   ft_putendl_fd.c \
-	   ft_putnbr_fd.c \
-	   ft_putstr_fd.c
+SRCS += ft_access.c \
+		ft_gnl.c \
+		ft_putchar_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		ft_putstr_fd.c
 #./libft_lst/
 SRCS += ft_dlstdel.c \
 	   ft_dlstdel_elem.c \

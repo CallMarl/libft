@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 16:51:44 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/06/04 14:11:47 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/07/10 14:36:16 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ void				ft_putstr_u(char *str);
 
 # define FT_MAX_FD 256
 
+int					ft_access(char *right);
 int					ft_gnl(int fd, char **line);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(const char *str, int fd);
