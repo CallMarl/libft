@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/18 12:21:14 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/07/18 14:08:30 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/07/18 15:32:56 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ extern int		ft_read(int fd, t_buff *content, size_t b_size)
 		return (-1);
 	while (42)
 	{
-		if ((ret = read(fd, content->buff, sizeof(char) * b_size)) < 0)
+		if ((ret = read(fd, &content->buff[content->cr], sizeof(char) * b_size)) < 0)
 		{
 			ft_buffdel(content);
 			return (-2);
