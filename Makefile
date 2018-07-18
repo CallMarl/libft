@@ -17,10 +17,10 @@ INCLUDES = -I./ \
 		   -I./libft_time/
 
 VPATH = ./libft_binary:./libft_buff:./libft_display:./libft_display/ft_printf: \
-./libft_display/ft_printf/extra:./libft_display/ft_printf/option: \
-./libft_display/ft_printf/skel:./libft_display/ft_printf/type:./libft_file: \
-./libft_lst:./libft_math:./libft_memory:./libft_nbr:./libft_sort:./libft_str: \
-./libft_time
+	./libft_display/ft_printf/extra:./libft_display/ft_printf/option: \
+	./libft_display/ft_printf/skel:./libft_display/ft_printf/type:./libft_file: \
+	./libft_lst:./libft_math:./libft_memory:./libft_nbr:./libft_sort:./libft_str: \
+	./libft_time
 
 #./libft_binary
 SRCS = ft_base2.c \
@@ -101,7 +101,8 @@ SRCS += ft_access.c \
 		ft_putchar_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_putstr_fd.c
+		ft_putstr_fd.c \
+		ft_read.c
 #./libft_lst/
 SRCS += ft_dlstdel.c \
 	   ft_dlstdel_elem.c \
@@ -270,7 +271,7 @@ $(OBJ_PATH)%.o : %.c
 	gcc $(INCLUDES) -c $< -o $@ $(FLAGS)
 
 $(NAME) : init $(OBJ) $(DEPS)
-	@$(CC) -rc $@ $(OBJ)
+	@$(CC) -rcs $@ $(OBJ)
 
 all : $(NAME)
 
