@@ -6,7 +6,7 @@
 /*   By: pprikazs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 16:18:53 by pprikazs          #+#    #+#             */
-/*   Updated: 2018/05/23 17:18:15 by pprikazs         ###   ########.fr       */
+/*   Updated: 2018/07/20 12:10:16 by pprikazs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ extern int			ft_buffinsert(t_buff *buff, void *elem, size_t ext)
 		if (ret == 0)
 			ret = ft_buffextend(buff, ext);
 		else
+			return (ret);
+		if (ret == 0)
 			return (ret);
 		i++;
 	}
